@@ -1,0 +1,14 @@
+import shutil
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+FILENAME = os.getenv('ILOVETATERS_TARGET_FILENAME')
+DESTINATION = os.getenv('ILOVETATERS_TARGET_DESTINATION')
+
+FILENAMEPUB = os.getenv('ILOVETATERS_TARGET_FILENAME_PUB')
+DESTINATIONPUB = os.getenv('ILOVETATERS_TARGET_DESTINATION_PUB')
+
+shutil.copy2(FILENAME, DESTINATION)
+shutil.copy2(FILENAMEPUB, DESTINATIONPUB)
